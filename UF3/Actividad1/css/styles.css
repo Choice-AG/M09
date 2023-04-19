@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Poppins:wght@400;500;600&family=Roboto&display=swap');
+
+:root {
+    --negro: #000;
+    --blanco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.header {
+    height: 120px;
+    width: 100vw;
+    background-color: var(--negro);
+    color: var(--blanco);
+    display: flex;
+    
+}
+
+div.header > div.left {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    font-size:3em;
+    font-family: 'Playball', cursive;
+    padding-left: 10%;
+}
+
+div.header > div.right {
+    width: 50vw;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+div.right > #menu {
+    display: flex;
+    list-style: none;
+    gap: 5%;
+}

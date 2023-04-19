@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+div.contenedor {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+div.contenedorInterior {
+    border: 1px solid #d4d4d4;
+    width: 80vw;
+}
+div.curso {
+    margin: 20px 0px 0px 20px;
+}
+p#textoCurso {
+    font-size: 0.95em;
+}
+p#textoCurso::before {
+    color: #959595;
+    content: "Alumnos / DAW / ";
+}
+div.centro {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+div.alumno {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 20px;
+}
+div.alumnoLeft{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+img#flechaIzq {
+    height: 33px;
+    margin-right: 10px;
+}
+img#fotoAvatar {
+    width: 40px;
+    border-radius: 50%;
+    filter: sepia(100%) hue-rotate(180deg) saturate(500%);
+}
+
+div.datosNombre {
+    display: flex;
+    flex-direction: row;
+}
+
+h2#nombreAlumn {
+    margin-left: 10px;
+}
+
+p#repetidor {
+    font-size: 0.95em;
+    color: #959595;
+    margin: 6px 10px;
+}
+
+div#presencialidad {
+    font-size: 0.7em;
+    height: 20px;
+    border-radius: 2px;
+    margin: 4px 40px;
+    background-color: #d1ebf7;
+    border: 1px solid #77c0ff;
+    padding: 5px 8px 0px 8px;
+}
+p#textPresencialidad {
+    text-align: center;
+    color: #2996fc;
+}
+div.alumnoRight {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 22px;
+    list-style:none;
+}
+
+ul {
+    text-decoration: none;
+}
+
+ul>li {
+    color: #222222;
+    display: inline-block;
+    padding: 10px 15px;
+}
+ul>li.listElement {
+    font-size: 14px;
+    margin-left: 5px;
+    padding: 10px 15px;
+}
+
+ul>li:nth-child(1), ul>li:nth-child(2) {
+    border-left: 1px solid #959595;
+    border-right: 1px solid #959595;
+}
+
+ul>li:nth-child(3) {
+    background-color: #1890ff;
+    color: white;
+}
+
+
+div.dots {
+    font-size: 30px;
+    margin: -10px 5px 0px 5px;
+}
+div.datosAlumno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    height: 70px;
+    margin: 20px 20px;
+    border: 2px dotted #77c0ff;
+    background-color: #d1ebf7;
+}
+div.textoDatos {
+   color: #3da1ff; 
+}
+
+@media screen and (max-width:950px) {
+    div.curso{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    p#textoCurso{
+        margin-left: 0px;
+        margin-right: 5%;
+    }
+
+    div.alumno{
+        width: 100%;
+    }
+
+    div.uscontenedorFotoAlumnoer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    img#fotoAvatar{
+        margin-right: 7%;
+    }
+
+    div.datosNombre{
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    div#presencialidad{
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    div.alumnoLeft{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    div.alumnoRight ul{
+        display: none;
+    }
+
+    img#flechaIzq{
+        display:none;
+    }
+
+    div.textoDatos {
+        color: var(--negro);
+    }
+}
