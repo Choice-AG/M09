@@ -2,14 +2,19 @@
   padding: 0;
   margin: 0;
 }
-.container {
+
+/* HEADER */
+.mainContainer {
   margin: 0;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+  position: relative;
   background-color: #343633;
 }
+
 .spotify {
   margin-top: 5px;
   display: grid;
@@ -17,11 +22,15 @@
   grid-column: 2;
   grid-row: 1;
   width: min(400px, 70%);
+  z-index: 2;
 }
+
 .spotify > img {
   width: 100%;
 }
+
 .buscador {
+  z-index: 2;
   padding: 10px;
   width: min(400px, 70%);
   display: grid;
@@ -29,8 +38,151 @@
   grid-column: 2;
   grid-row: 2;
 } 
+
 .buscador > input {
   margin-top: 5px;
   width: 100%;
   height: 30px;
+  border: none;
+}
+
+video{
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+/* ALBUM */
+.albumContainer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  font-size: 40px;
+  background-color: #353633;
+  color: #dcdcdc;
+  align-items: center;
+  padding-top: 40px;
+  padding-left: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.albumContainer div p {
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* SONG AND DURATION */
+.secondaryContainer {
+  color:#e5825a;
+  background-color: #343633;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.secondaryContainer p {
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* SONGLIST */
+.songContainer {
+  align-items: center;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 10px;
+}
+
+.imgPlay {
+  width: 24px;
+}
+
+.songContainer p {
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.songContainer:hover:nth-child(even) {
+  background-color: #696969;
+  color:#869a83;
+}
+
+.songContainer:hover {
+  background-color: #696969;
+  color:#869a83;
+}
+
+.songContainer:nth-child(even){
+  background-color: #dcdcdc;
+}
+
+.sprite{
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/dobleHeart.svg");
+}
+
+.sprite-1 {
+  background-position: 0px;
+}
+
+.sprite-2 {
+  background-position: -50px;
+  animation:  animateHeart 1.2s;
+}
+
+@keyframes animateHeart {
+  0% {
+    transform: scale(.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(.75);
+  } 
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ALBUMS */
+.albumsContainer{
+  background-color: #353633;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(217px, 1fr)); 
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.albumsContainer img{
+  width: 100%;
+}
+
+.albumsContainer :nth-child(3){
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.albumsContainer :nth-child(5){
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.albumsContainer img:hover{
+  filter: hue-rotate(90deg);
+}
+
+@media only screen and (max-width: 608px) {
+  .albumContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }   
 }
