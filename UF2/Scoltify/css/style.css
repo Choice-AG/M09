@@ -191,7 +191,7 @@ audio::-webkit-media-controls-time-remaining-display {
 .albumsContainer{
   background-color: #353633;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(217px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
   grid-gap: 10px;
   grid-auto-flow: dense;
 }
